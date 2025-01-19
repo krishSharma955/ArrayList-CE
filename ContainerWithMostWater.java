@@ -15,7 +15,7 @@ public class ContainerWithMostWater {
         return maxWater;
     }
 
-    public static int twoPointer(ArrayList<Integer> height) {
+    public static int twoPointer(ArrayList<Integer> height) { //Time Complexity - O(N)
         int left = 0;
         int right = height.size()-1;
         int maxWater = 0;
@@ -32,7 +32,8 @@ public class ContainerWithMostWater {
             }
         }
         return maxWater;
-    }
+    } 
+
     public static void main(String[] args) {
         ArrayList<Integer> height = new ArrayList<>();
         //1, 8, 6, 2, 5, 4, 8, 3, 7
@@ -45,7 +46,9 @@ public class ContainerWithMostWater {
         height.add(8);
         height.add(3);
         height.add(7);
-        // System.out.println(bruteForce(height));
+
+        System.out.println(bruteForce(height));
+        
         System.out.println(twoPointer(height));
     }
 }
